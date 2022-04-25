@@ -1,0 +1,15 @@
+.profile__specialization {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 715px) {
+  .profile__specialization{
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 10px;
+  }
+}

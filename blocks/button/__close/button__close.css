@@ -1,0 +1,14 @@
+.button__close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  box-sizing: border-box;
+  background-image: url(../../../images/button__exit.svg);
+  background-position: center center;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}

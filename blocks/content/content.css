@@ -1,0 +1,10 @@
+.content {
+  margin: 40px auto 67px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 590px) {
+  .content {
+    margin: 42px auto 48px;
+  }
+}

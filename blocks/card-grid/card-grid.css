@@ -1,0 +1,19 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat( 3, 282px);
+  grid-column-gap: 17px;
+  grid-row-gap: 20px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 984px) {
+  .card-grid {
+    grid-template-columns: repeat( 2, 282px);
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .card-grid {
+    grid-template-columns: 282px;
+  }
+}

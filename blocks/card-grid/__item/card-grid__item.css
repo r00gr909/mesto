@@ -1,0 +1,13 @@
+.card-grid__item {
+  width: 100%;
+  object-fit: cover;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+

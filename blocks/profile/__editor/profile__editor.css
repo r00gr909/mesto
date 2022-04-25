@@ -1,0 +1,15 @@
+.profile__editor {
+  max-width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 590px) {
+  .profile__editor {
+    margin-top: 16px;
+    justify-content: center;
+  }
+}
+
