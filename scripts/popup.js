@@ -3,5 +3,5 @@ const popup = document.querySelector('.popup');
 const popupCloseBtn = document.querySelector('.button__close');
 
 popupOpenBtn.addEventListener('click', function() {
-  alert('xyi')
+  alert('xyi mux')
 })
