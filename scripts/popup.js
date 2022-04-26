@@ -30,13 +30,29 @@ function formSubmitHandler (evt) {
   profileName.textContent = nameInput.value;
   profileInfo.textContent = jobInput.value;
   if (profileName.textContent === 'Муха') {
-    alert('Муха хуй сосет! XD')
+    alert('Муха хуй сосет! XD');
+    profileInfo.textContent = 'Даю в попу';
   } else if (profileName.textContent === 'Айдыс') {
-    alert('300? Отсоси у Тракториста, Айдис! XD')
+    alert('300? Отсоси у Тракториста, Айдис! XD');
+    profileInfo.textContent = 'Все глубже и глубже';
   } else if (profileName.textContent === 'Дамир') {
-    alert('Стёепа - лизатель пихды! XD')
+    alert('Стёепа - лизатель пихды! XD');
+    profileInfo.textContent = '500 руб/час';
   } else if (profileName.textContent === 'Самян') {
-    alert('Властелин html  XD')
+    alert('Властелин html  XD');
+    profileInfo.textContent = 'Шуточки подъехали';
+  } else if (profileName.textContent === 'Буян') {
+    alert('Невиный задрот XD');
+    profileInfo.textContent = 'Путь до рекурта';
+  } else if (profileName.textContent === 'Буян') {
+    alert('Невиный задрот XD');
+    profileInfo.textContent = 'Путь до рекурта';
+  } else if (profileName.textContent === 'Кристина') {
+    alert('Любюлю тебя &#4326;');
+    profileInfo.textContent = 'Самая красивая ${&#4326;}';
+  } else if (profileName.textContent === 'Дан-Хаяа') {
+    alert('Малыыыш, скучаю :(');
+    profileInfo.textContent = 'Самая милая малышка <3';
   };
   RemovePopup();
 };
