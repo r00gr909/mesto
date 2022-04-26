@@ -1,8 +1,9 @@
 const popupEditBtn = document.querySelector('.button__edit');
 const popup = document.querySelector('.popup');
 const popupCloseBtn = document.querySelector('.button__close');
-const popupSave = document.querySelector('.button__saving')
-let popupContainer = document.querySelector('.popup__container')
+const popupSave = document.querySelector('.button__saving');
+const AddBtn = document.querySelector('.button__add');
+let popupContainer = document.querySelector('.popup__container');
 let nameInput = document.querySelector('.popup__input_name');
 let jobInput = document.querySelector('.popup__input_job');
 let profileName = document.querySelector('.profile__name');
@@ -36,3 +37,7 @@ popupSave.addEventListener('click', formSubmitHandler);
 popupCloseBtn.addEventListener('click', function() {
   RemovePopup();
 });
+
+AddBtn.addEventListener('click', function() {
+  alert('Xyi Azia')
+})
