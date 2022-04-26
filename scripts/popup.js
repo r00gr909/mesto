@@ -35,6 +35,8 @@ function formSubmitHandler (evt) {
     alert('300? Отсоси у Тракториста, Айдис! XD')
   } else if (profileName.textContent === 'Дамир') {
     alert('Стёепа - лизатель пихды! XD')
+  } else if (profileName.textContent === 'Самян') {
+    alert('Властелин html  XD')
   };
   RemovePopup();
 };
