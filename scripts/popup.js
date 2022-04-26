@@ -29,6 +29,11 @@ function formSubmitHandler (evt) {
   jobInput.getAttribute('value');
   profileName.textContent = nameInput.value;
   profileInfo.textContent = jobInput.value;
+  if (profileName.textContent === 'Муха') {
+    alert('Муха хуй сосет! XD')
+  } else if (profileName.textContent === 'Айдыс') {
+    alert('300? Отсоси у Тракториста, Айдис! XD')
+  };
   RemovePopup();
 };
 
@@ -41,3 +46,5 @@ popupCloseBtn.addEventListener('click', function() {
 AddBtn.addEventListener('click', function() {
   alert('Fixed')
 })
+
+
