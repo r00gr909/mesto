@@ -39,5 +39,5 @@ popupCloseBtn.addEventListener('click', function() {
 });
 
 AddBtn.addEventListener('click', function() {
-  alert('Xyi Azia')
+  alert('Fixed')
 })
