@@ -6,3 +6,10 @@
   margin:0 0 54px;
 
 }
+
+@media screen and (max-width: 590px) {
+  .popup__heiding {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

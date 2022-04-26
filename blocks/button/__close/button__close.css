@@ -12,3 +12,16 @@
   top: -40px;
   right: -40px;
 }
+
+.button__close:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 590px) {
+  .button__close {
+    width: 20px;
+    height: 20px;
+    top: -36px;
+    right: 0;
+  }
+}

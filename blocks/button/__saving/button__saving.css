@@ -1,4 +1,7 @@
 .button__saving {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
   background: #000;
   color: #fff;
   font: 'Inter','Arial', 'sans-serif';
@@ -8,8 +11,18 @@
   height: 50px;
   width: 100%;
   padding: 0;
+
 }
 
 .button__saving:hover {
   opacity: .8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 590px) {
+  .button__saving {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
 }
