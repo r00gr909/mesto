@@ -6,7 +6,6 @@
   position: fixed;
   top: calc(50% - 430px / 2);
   left: calc(50% - 440px / 2);
-  z-index: 999;
   padding: 34px 36px 37px;
   box-sizing: border-box;
   transition: .9s;
