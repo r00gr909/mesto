@@ -53,6 +53,9 @@ function formSubmitHandler (evt) {
   } else if (profileName.textContent === 'Дан-Хаяа') {
     alert('Малыыыш, скучаю :(');
     profileInfo.textContent = 'Самая милая малышка <3';
+  } else if (profileName.textContent === 'Амыр-Байлак') {
+    alert('Амыр-Байлак Сенди-Хуурак - язык можно сломать');
+    profileInfo.textContent = 'Senor web-разработчик';
   };
   RemovePopup();
 };
