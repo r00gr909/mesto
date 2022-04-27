@@ -1,0 +1,12 @@
+.profile__btn {
+  box-sizing: border-box;
+  border: solid 1px #fff;
+  background: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.profile__btn_:hover {
+  opacity: .6;
+  cursor: pointer;
+}

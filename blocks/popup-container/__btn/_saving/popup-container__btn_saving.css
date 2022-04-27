@@ -1,4 +1,4 @@
-.button__saving {
+.popup-container__btn_saving {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -14,13 +14,12 @@
 
 }
 
-.button__saving:hover {
+.popup-container__btn_saving:hover {
   opacity: .8;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 590px) {
-  .button__saving {
+  .popup-container__btn_saving {
     font-size: 14px;
     line-height: 17px;
   }

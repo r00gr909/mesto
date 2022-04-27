@@ -1,10 +1,10 @@
-.button__close {
+.popup-container__btn_close {
   width: 32px;
   height: 32px;
   border: none;
   background: none;
   box-sizing: border-box;
-  background-image: url(../../../images/button__exit.svg);
+  background-image: url(../../../../images/button__exit.svg);
   background-position: center center;
   background-size: 32px;
   background-repeat: no-repeat;
@@ -13,12 +13,8 @@
   right: -40px;
 }
 
-.button__close:hover {
-  cursor: pointer;
-}
-
 @media screen and (max-width: 590px) {
-  .button__close {
+  .popup-container__btn_close {
     width: 20px;
     height: 20px;
     top: -36px;

@@ -1,4 +1,4 @@
-.popup__input {
+.popup-container__input {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -8,7 +8,4 @@
   width: 100%;
   margin-bottom: 20px;
   box-sizing: border-box;
-
 }
-
-
