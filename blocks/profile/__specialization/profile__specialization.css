@@ -1,9 +1,13 @@
 .profile__specialization {
   font-size: 18px;
   line-height: 22px;
+  font-weight: 400;
   margin: 0;
   align-self: flex-start;
-  margin-top: 16px;
+  margin-top: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 715px) {

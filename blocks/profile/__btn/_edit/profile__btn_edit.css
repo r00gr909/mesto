@@ -4,3 +4,11 @@
   background-image: url(../../../../images/button_edit.svg);
   background-size: 10px;
 }
+
+@media screen and (max-width: 590px) {
+  .profile__btn_edit {
+    width: 18px;
+    height: 18px;
+    background-size: 7px;
+  }
+}

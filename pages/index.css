@@ -1,7 +1,10 @@
 @import url(../vendor/normalize.css);
-@import url(../fonts/inter.css);
+@import url(../vendor/inter.css);
 
 @import url(../blocks/page/page.css);
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
 
 @import url(../blocks/content/content.css);
 
@@ -9,7 +12,6 @@
 @import url(../blocks/popup/_active/popup_active.css);
 
 @import url(../blocks/popup-container/popup-container.css);
-@import url(../blocks/popup-container/_active/popup-container_active.css);
 @import url(../blocks/popup-container/__btn/popup-container__btn.css);
 @import url(../blocks/popup-container/__btn/_close/popup-container__btn_close.css);
 @import url(../blocks/popup-container/__btn/_saving/popup-container__btn_saving.css);
@@ -17,10 +19,6 @@
 @import url(../blocks/popup-container/__input/popup-contaier__input.css);
 @import url(../blocks/popup-container/__input/_job/popup-container__input_job.css);
 @import url(../blocks/popup-container/__input/_name/popup-container__input_name.css);
-
-@import url(../blocks/header/header.css);
-@import url(../blocks/header/__logo/header__logo.css);
-@import url(../blocks/header/__line/header__line.css);
 
 @import url(../blocks/like/like.css);
 

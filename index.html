@@ -10,32 +10,36 @@
   <body class="page">
     <header class="header">
       <img src="images/logo.svg" alt="Логотип Место" class="header__logo" />
-      <div class="header__line"></div>
     </header>
 
     <main class="content">
-      <div class="popup"></div>
-      <form class="popup-container">
-        <h3 class="popup-container__heading">Редактировать профиль</h3>
-        <input
-          type="text"
-          class="popup-container__input popup-container__input_name"
-          value="Жак-Ив Кусто"
-        />
-        <input
-          type="text"
-          class="popup-container__input popup-container__input_job"
-          value="Исследователь океана"
-        />
-        <input
-          type="submit"
-          value="Сохранить"
-          class="popup-container__btn popup-container__btn_saving"
-        />
-        <button
-          class="popup-container__btn popup-container__btn_close"
-        ></button>
-      </form>
+      <div class="popup">
+        <form class="popup-container" name="popup-container">
+          <h3 class="popup-container__heading">Редактировать профиль</h3>
+          <input
+            type="text"
+            class="popup-container__input popup-container__input_name"
+            value="Жак-Ив Кусто"
+            name="name-edit"
+          />
+          <input
+            type="text"
+            class="popup-container__input popup-container__input_job"
+            value="Исследователь океана"
+            name="job-edit"
+          />
+          <input
+            type="submit"
+            value="Сохранить"
+            class="popup-container__btn popup-container__btn_saving"
+            name="btn-save"
+          />
+          <button
+            class="popup-container__btn popup-container__btn_close"
+            type="button"
+          ></button>
+        </form>
+      </div>
       <section class="profile">
         <div class="profile__info">
           <img
@@ -45,11 +49,14 @@
           />
           <div class="profile__editor">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__btn profile__btn_edit"></button>
+            <button
+              class="profile__btn profile__btn_edit"
+              type="button"
+            ></button>
             <p class="profile__specialization">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__btn profile__btn_add"></button>
+        <button class="profile__btn profile__btn_add" type="button"></button>
       </section>
 
       <section class="card-grid">
@@ -59,8 +66,8 @@
             alt="Замок Карачевск"
             class="card-grid__img"
           />
-          <h2 class="card-grid__name">Карачевск</h2>
-          <img src="images/like.svg" alt="Лайк" class="like" />
+          <h2 class="card-grid__name">Карачаевск</h2>
+          <button type="button" class="like"></button>
         </div>
         <div class="card-grid__item">
           <img
@@ -69,7 +76,7 @@
             class="card-grid__img"
           />
           <h2 class="card-grid__name">Гора Эльбрус</h2>
-          <img src="images/like.svg" alt="Лайк" class="like" />
+          <button type="button" class="like"></button>
         </div>
         <div class="card-grid__item">
           <img
@@ -78,7 +85,7 @@
             class="card-grid__img"
           />
           <h2 class="card-grid__name">Домбай</h2>
-          <img src="images/like.svg" alt="Лайк" class="like" />
+          <button type="button" class="like"></button>
         </div>
         <div class="card-grid__item">
           <img
@@ -87,7 +94,7 @@
             class="card-grid__img"
           />
           <h2 class="card-grid__name">Гора Эльбрус</h2>
-          <img src="images/like.svg" alt="Лайк" class="like" />
+          <button type="button" class="like"></button>
         </div>
         <div class="card-grid__item">
           <img
@@ -96,7 +103,7 @@
             class="card-grid__img"
           />
           <h2 class="card-grid__name">Домбай</h2>
-          <img src="images/like.svg" alt="Лайк" class="like" />
+          <button type="button" class="like"></button>
         </div>
         <div class="card-grid__item">
           <img
@@ -104,14 +111,14 @@
             alt="Замок Карачевск"
             class="card-grid__img"
           />
-          <h2 class="card-grid__name">Карачевск</h2>
-          <img src="images/like.svg" alt="Лайк" class="like" />
+          <h2 class="card-grid__name">Карачаевск</h2>
+          <button type="button" class="like"></button>
         </div>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <script src="./scripts/popup.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
