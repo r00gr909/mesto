@@ -1,16 +1,16 @@
-.like {
+.card-grid__btn-like {
   width: 22px;
   height: 19px;
   margin-right: 20px;
   background: none;
-  background-image: url(../../images/like.svg);
+  background-image: url(../../../images/like.svg);
   background-position: center;
   background-repeat: no-repeat;
   border: none;
 
 }
 
-.like:hover {
+.card-grid__btn-like:hover {
   opacity: .6;
   cursor: pointer;
 }
