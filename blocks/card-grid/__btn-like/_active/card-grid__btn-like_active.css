@@ -1,15 +1,15 @@
-.card-grid__btn-like {
+.card-grid__btn-like_active {
   width: 22px;
   height: 19px;
   margin-right: 20px;
   background: none;
-  background-image: url(../../../images/like.svg);
+  background-image: url(../../../../images/like_active.svg);
   background-position: center;
   background-repeat: no-repeat;
   border: none;
 }
 
-.card-grid__btn-like:hover {
+.card-grid__btn-like_active:hover {
   opacity: .6;
   cursor: pointer;
 }
