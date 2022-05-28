@@ -18,8 +18,8 @@ const popups = document.querySelectorAll('.popup');
 const popupContainer = document.querySelector('.popup-container')
 const popupSaveBtn = document.querySelector('.popup-container__btn_saving');
 const cardGrid = document.querySelector('.card-grid');
-const zoomImg = document.querySelector('.popup__image_img');
-const zoomImgText = document.querySelector('.popup__image_text');
+const zoomImg = document.querySelector('.popup-image__img');
+const zoomImgText = document.querySelector('.popup-image__text');
 
 function AddPopup (popup) {
   popup.classList.add('popup_active');

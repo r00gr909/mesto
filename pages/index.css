@@ -25,10 +25,10 @@
 @import url(../blocks/popup-container/__input/_job/popup-container__input_job.css);
 @import url(../blocks/popup-container/__input/_name/popup-container__input_name.css);
 
-@import url(../blocks/popup__image/popup__image.css);
-@import url(../blocks/popup__image/_text/popup__image_text.css);
-@import url(../blocks/popup__image/_img/popup__image_img.css);
 
+@import url(../blocks/popup-image/popup-image.css);
+@import url(../blocks/popup-image/__img/popup-image__img.css);
+@import url(../blocks/popup-image/__text/popup-image__text.css);
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__avatar/profile__avatar.css);
