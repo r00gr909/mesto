@@ -11,4 +11,5 @@
   visibility: hidden;
   z-index: 1;
   opacity: 0;
+  transition: ease-in-out 0.5s;
 }

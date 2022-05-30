@@ -1,25 +1,25 @@
-let nameInput = document.querySelector('#name-edit');
-let jobInput = document.querySelector('#job-edit');
-let cardNameInput = document.querySelector('.add-card__input_name');
-let cardUrlInput = document.querySelector('.add-card__input_url');
-let profileName = document.querySelector('.profile__name');
-let profileInfo = document.querySelector('.profile__specialization');
+const nameInput = document.querySelector('#name-edit');
+const jobInput = document.querySelector('#job-edit');
+const cardNameInput = document.querySelector('.add-card__input_name');
+const cardUrlInput = document.querySelector('.add-card__input_url');
+const profileName = document.querySelector('.profile__name');
+const profileInfo = document.querySelector('.profile__specialization');
 
-const editName = document.querySelector('#edit');
-const addCard = document.querySelector('#add');
+const popupEditName = document.querySelector('#edit');
+const popupAddCard = document.querySelector('#add');
 const popupImage = document.querySelector('#image-zoom');
 const formElement = document.querySelector('#edit-name');
 const formElementAdd = document.querySelector('#add-card');
-const NewCardName = formElementAdd.querySelector('#card-name');
-const NewCardImg = formElementAdd.querySelector('#card-url');
-const editBtn = document.querySelector('.profile__btn_edit');
-const addBtn = document.querySelector('.profile__btn_add');
+const popupNewCardName = formElementAdd.querySelector('#card-name');
+const popupNewCardImg = formElementAdd.querySelector('#card-url');
+const profileEditBtn = document.querySelector('.profile__btn_edit');
+const cardAddBtn = document.querySelector('.profile__btn_add');
 const popups = document.querySelectorAll('.popup');
 const popupContainer = document.querySelector('.popup-container')
 const popupSaveBtn = document.querySelector('.popup-container__btn_saving');
 const cardGrid = document.querySelector('.card-grid');
-const zoomImg = document.querySelector('.popup-image__img');
-const zoomImgText = document.querySelector('.popup-image__text');
+const popupZoomImg = document.querySelector('.popup-image__img');
+const popupZoomImgText = document.querySelector('.popup-image__text');
 
 function AddPopup (popup) {
   popup.classList.add('popup_active');
@@ -36,14 +36,14 @@ popups.forEach((popup) => {
   });
 });
 
-editBtn.addEventListener ('click', () => {
-  AddPopup(editName);
+profileEditBtn.addEventListener ('click', () => {
+  AddPopup(popupEditName);
   nameInput.value = profileName.textContent;
   jobInput.value = profileInfo.textContent;
 });
 
-addBtn.addEventListener('click', () => {
-  AddPopup(addCard);
+cardAddBtn.addEventListener('click', () => {
+  AddPopup(popupAddCard);
 });
 
 
@@ -51,7 +51,7 @@ function formSubmitHandler (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileInfo.textContent = jobInput.value;
-  RemovePopup(editName);
+  RemovePopup(popupEditName);
 };
 
 formElement.addEventListener('submit', formSubmitHandler);
@@ -85,15 +85,15 @@ const initialCards = [
 ];
 
 
-const CardGridTemplate = document.querySelector('#card-grid-template').content;
-
-const likeBtn = CardGridTemplate.querySelector('.card-grid__btn-like');
-const deleteBtn = CardGridTemplate.querySelector('.card-grid__trash');
+const cardGridTemplate = document.querySelector('#card-grid-template').content;
+const cardsGridItem = cardGridTemplate.querySelector('.card-grid__item');
+const cardLikeBtn = cardGridTemplate.querySelector('.card-grid__btn-like');
+const cardDeleteBtn = cardGridTemplate.querySelector('.card-grid__trash');
 
 function createImagePopup(name, image) {
-  zoomImg.src = image;
-  zoomImg.alt = name;
-  zoomImgText.textContent = name;
+  popupZoomImg.src = image;
+  popupZoomImg.alt = name;
+  popupZoomImgText.textContent = name;
 }
 
 
@@ -104,30 +104,34 @@ const likeActive = (evt) => {
 
 
 function CreateCard(image, name) {
-  const cardsGridItem = CardGridTemplate.querySelector('.card-grid__item').cloneNode(true);
-  const CardImg = cardsGridItem.querySelector('.card-grid__img');
-  const CardName = cardsGridItem.querySelector('.card-grid__name');
-  const likeBtn =  cardsGridItem.querySelector('.card-grid__btn-like');
-  const deleteBtn =  cardsGridItem.querySelector('.card-grid__trash');
-  CardImg.src = image;
-  CardName.alt = name;
-  CardName.textContent = name;
-  CardImg.addEventListener ('click', () => {
+  cardsGridItem.cloneNode(true);
+  const cardImg = cardsGridItem.querySelector('.card-grid__img');
+  const cardName = cardsGridItem.querySelector('.card-grid__name');
+  cardImg.src = image;
+  cardName.alt = name;
+  cardName.textContent = name;
+  cardImg.addEventListener ('click', () => {
     AddPopup(popupImage);
     createImagePopup(name, image);
   });
-  likeBtn.addEventListener('click', likeActive);
-  deleteBtn.addEventListener('click', () => {
+  cardLikeBtn.addEventListener('click', likeActive);
+  cardDeleteBtn.addEventListener('click', () => {
     cardsGridItem.remove();
   });
-  cardGrid.append(cardsGridItem);
   return cardsGridItem;
 }
+/*
+function RenderCard (image, name) {
+  cardsGridItem.cloneNode(true);
+  CreateCard (image, name);
+  cardGrid.append(cardsGridItem);
+} */
 
+/* RenderCard (image, name); */
 
   function AddCardsGrid(initialCards) {
   for (let i = 0; i < initialCards.length; i += 1) {
-  const cardsGridItem = CardGridTemplate.querySelector('.card-grid__item').cloneNode(true);
+  const cardsGridItem = cardGridTemplate.querySelector('.card-grid__item').cloneNode(true);
   cardsGridItem.querySelector('.card-grid__img').src = initialCards[i].link;
   cardsGridItem.querySelector('.card-grid__name').alt = initialCards[i].name;
   cardsGridItem.querySelector('.card-grid__name').textContent = initialCards[i].name;
@@ -135,10 +139,10 @@ function CreateCard(image, name) {
     AddPopup(popupImage);
     createImagePopup(initialCards[i].name, initialCards[i].link);
   });
-  const likeBtn =  cardsGridItem.querySelector('.card-grid__btn-like');
-  const deleteBtn =  cardsGridItem.querySelector('.card-grid__trash');
-  likeBtn.addEventListener('click', likeActive);
-  deleteBtn.addEventListener('click', () => {
+  const cardLikeBtn =  cardsGridItem.querySelector('.card-grid__btn-like');
+  const cardDeleteBtn =  cardsGridItem.querySelector('.card-grid__trash');
+  cardLikeBtn.addEventListener('click', likeActive);
+  cardDeleteBtn.addEventListener('click', () => {
     cardsGridItem.remove();
   });
   cardGrid.append(cardsGridItem);
@@ -151,10 +155,10 @@ AddCardsGrid(initialCards);
 
 function addNewCard(evt) {
   evt.preventDefault();
-  cardGrid.prepend(CreateCard(NewCardImg.value, NewCardName.value));
-  RemovePopup(addCard);
-  NewCardName.value = "";
-  NewCardImg.value = "";
+  cardGrid.prepend(CreateCard(popupNewCardImg.value, popupNewCardName.value));
+  RemovePopup(popupAddCard);
+  popupNewCardName.value = "";
+  popupNewCardImg.value = "";
 }
 
 formElementAdd.addEventListener('submit', addNewCard);
