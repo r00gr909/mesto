@@ -86,8 +86,6 @@ const initialCards = [
 
 
 const cardGridTemplate = document.querySelector('#card-grid-template').content;
-const cardLikeBtn = cardGridTemplate.querySelector('.card-grid__btn-like');
-
 
 
 
@@ -130,7 +128,6 @@ function createCard(image, name) {
 function addCardsGrid(initialCards) {
   initialCards.forEach((item) => {
     cardGrid.append(createCard(item.link, item.name));
-    cardLikeBtn.addEventListener ('click', likeActive);
   });
 };
 
