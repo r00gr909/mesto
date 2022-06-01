@@ -21,29 +21,29 @@ const cardGrid = document.querySelector('.card-grid');
 const popupZoomImg = document.querySelector('.popup-image__img');
 const popupZoomImgText = document.querySelector('.popup-image__text');
 
-function AddPopup (popup) {
+function addPopup (popup) {
   popup.classList.add('popup_active');
 }
 
-function RemovePopup (popup) {
+function removePopup (popup) {
   popup.classList.remove('popup_active');
 }
 
 popups.forEach((popup) => {
   const popupCloseBtn = popup.querySelector('.popup__btn_close');
   popupCloseBtn.addEventListener('click', () => {
-    RemovePopup(popup);
+    removePopup(popup);
   });
 });
 
 profileEditBtn.addEventListener ('click', () => {
-  AddPopup(popupEditName);
+  addPopup(popupEditName);
   nameInput.value = profileName.textContent;
   jobInput.value = profileInfo.textContent;
 });
 
 cardAddBtn.addEventListener('click', () => {
-  AddPopup(popupAddCard);
+  addPopup(popupAddCard);
 });
 
 
@@ -51,7 +51,7 @@ function formSubmitHandler (evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileInfo.textContent = jobInput.value;
-  RemovePopup(popupEditName);
+  removePopup(popupEditName);
 };
 
 formElement.addEventListener('submit', formSubmitHandler);
@@ -86,9 +86,10 @@ const initialCards = [
 
 
 const cardGridTemplate = document.querySelector('#card-grid-template').content;
-const cardsGridItem = cardGridTemplate.querySelector('.card-grid__item');
 const cardLikeBtn = cardGridTemplate.querySelector('.card-grid__btn-like');
-const cardDeleteBtn = cardGridTemplate.querySelector('.card-grid__trash');
+
+
+
 
 function createImagePopup(name, image) {
   popupZoomImg.src = image;
@@ -100,63 +101,48 @@ function createImagePopup(name, image) {
 
 const likeActive = (evt) => {
   evt.target.classList.toggle('card-grid__btn-like_active');
+  console.log('5');
 }
 
 
-function CreateCard(image, name) {
-  cardsGridItem.cloneNode(true);
+function createCard(image, name) {
+  const cardsGridItem = cardGridTemplate.querySelector('.card-grid__item').cloneNode(true);
+  const cardLikeBtn = cardGridTemplate.querySelector('.card-grid__btn-like');
+  cardDeleteBtn = cardGridTemplate.querySelector('.card-grid__trash');
   const cardImg = cardsGridItem.querySelector('.card-grid__img');
   const cardName = cardsGridItem.querySelector('.card-grid__name');
   cardImg.src = image;
   cardName.alt = name;
   cardName.textContent = name;
   cardImg.addEventListener ('click', () => {
-    AddPopup(popupImage);
+    addPopup(popupImage);
     createImagePopup(name, image);
   });
+
   cardLikeBtn.addEventListener('click', likeActive);
   cardDeleteBtn.addEventListener('click', () => {
     cardsGridItem.remove();
   });
   return cardsGridItem;
-}
-/*
-function RenderCard (image, name) {
-  cardsGridItem.cloneNode(true);
-  CreateCard (image, name);
-  cardGrid.append(cardsGridItem);
-} */
-
-/* RenderCard (image, name); */
-
-  function AddCardsGrid(initialCards) {
-  for (let i = 0; i < initialCards.length; i += 1) {
-  const cardsGridItem = cardGridTemplate.querySelector('.card-grid__item').cloneNode(true);
-  cardsGridItem.querySelector('.card-grid__img').src = initialCards[i].link;
-  cardsGridItem.querySelector('.card-grid__name').alt = initialCards[i].name;
-  cardsGridItem.querySelector('.card-grid__name').textContent = initialCards[i].name;
-  cardsGridItem.querySelector('.card-grid__img').addEventListener ('click', () => {
-    AddPopup(popupImage);
-    createImagePopup(initialCards[i].name, initialCards[i].link);
-  });
-  const cardLikeBtn =  cardsGridItem.querySelector('.card-grid__btn-like');
-  const cardDeleteBtn =  cardsGridItem.querySelector('.card-grid__trash');
-  cardLikeBtn.addEventListener('click', likeActive);
-  cardDeleteBtn.addEventListener('click', () => {
-    cardsGridItem.remove();
-  });
-  cardGrid.append(cardsGridItem);
-  }
 };
 
-AddCardsGrid(initialCards);
+
+function addCardsGrid(initialCards) {
+  initialCards.forEach((item) => {
+    cardGrid.append(createCard(item.link, item.name));
+  });
+};
+
+
+addCardsGrid(initialCards);
 
 
 
 function addNewCard(evt) {
   evt.preventDefault();
-  cardGrid.prepend(CreateCard(popupNewCardImg.value, popupNewCardName.value));
-  RemovePopup(popupAddCard);
+  cardGrid.prepend(createCard(popupNewCardImg.value, popupNewCardName.value));
+  cardLikeBtn.addEventListener('click', likeActive);
+  removePopup(popupAddCard);
   popupNewCardName.value = "";
   popupNewCardImg.value = "";
 }
