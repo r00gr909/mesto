@@ -86,6 +86,7 @@ const initialCards = [
 
 
 const cardGridTemplate = document.querySelector('#card-grid-template').content;
+const cardLikeBtn = cardGridTemplate.querySelector('.card-grid__btn-like');
 
 
 
