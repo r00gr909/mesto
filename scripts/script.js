@@ -101,14 +101,13 @@ function createImagePopup(name, image) {
 
 const likeActive = (evt) => {
   evt.target.classList.toggle('card-grid__btn-like_active');
-  console.log('5');
 }
 
 
 function createCard(image, name) {
   const cardsGridItem = cardGridTemplate.querySelector('.card-grid__item').cloneNode(true);
-  const cardLikeBtn = cardGridTemplate.querySelector('.card-grid__btn-like');
-  cardDeleteBtn = cardGridTemplate.querySelector('.card-grid__trash');
+  const cardLikeBtn = cardsGridItem.querySelector('.card-grid__btn-like');
+  const cardDeleteBtn = cardsGridItem.querySelector('.card-grid__trash');
   const cardImg = cardsGridItem.querySelector('.card-grid__img');
   const cardName = cardsGridItem.querySelector('.card-grid__name');
   cardImg.src = image;
@@ -119,8 +118,9 @@ function createCard(image, name) {
     createImagePopup(name, image);
   });
 
-  cardLikeBtn.addEventListener('click', likeActive);
-  cardDeleteBtn.addEventListener('click', () => {
+  cardLikeBtn.addEventListener ('click', likeActive);
+
+  cardDeleteBtn.addEventListener ('click', () => {
     cardsGridItem.remove();
   });
   return cardsGridItem;
@@ -130,6 +130,7 @@ function createCard(image, name) {
 function addCardsGrid(initialCards) {
   initialCards.forEach((item) => {
     cardGrid.append(createCard(item.link, item.name));
+    cardLikeBtn.addEventListener ('click', likeActive);
   });
 };
 
