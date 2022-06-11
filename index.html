@@ -14,50 +14,78 @@
 
     <main class="content">
       <div class="popup" id="edit">
-        <form class="popup-container" name="popup-container" id="edit-name">
-          <h3 class="popup-container__heading">Редактировать профиль</h3>
-          <input
-            type="text"
-            class="popup-container__input popup-container__input_name"
-            value="Жак-Ив Кусто"
-            name="name-edit"
-            id="name-edit"
-          />
-          <input
-            type="text"
-            class="popup-container__input popup-container__input_job"
-            value="Исследователь океана"
-            name="job-edit"
-            id="job-edit"
-          />
-          <button class="popup__btn popup__btn_saving" type="submit">
-            Сохранить
-          </button>
-          <button class="popup__btn popup__btn_close" type="button"></button>
-        </form>
+        <div class="popup__item">
+          <form
+            class="popup-container"
+            name="popup-container"
+            id="edit-name"
+            novalidate
+          >
+            <h3 class="popup-container__heading">Редактировать профиль</h3>
+            <input
+              class="popup-container__input popup-container__input_name"
+              value="Жак-Ив Кусто"
+              name="name-edit"
+              id="name-edit"
+              minlength="2"
+              maxlength="40"
+              type="text"
+              required
+            />
+            <span class="popup-container__error-text name-edit-error"></span>
+            <input
+              class="popup-container__input popup-container__input_job"
+              value="Исследователь океана"
+              name="job-edit"
+              id="job-edit"
+              minlength="2"
+              maxlength="200"
+              type="text"
+              required
+            />
+            <span class="popup-container__error-text job-edit-error"></span>
+            <button class="popup__btn popup__btn_saving" type="submit">
+              Сохранить
+            </button>
+            <button class="popup__btn popup__btn_close" type="button"></button>
+          </form>
+        </div>
       </div>
       <div class="popup" id="add">
-        <form class="popup-container" name="popup-container" id="add-card">
-          <h3 class="popup-container__heading">Новое место</h3>
-          <input
-            type="text"
-            class="popup-container__input popup-container__input_name"
-            placeholder="Название"
-            name="card-name"
-            id="card-name"
-          />
-          <input
-            type="text"
-            class="popup-container__input popup-container__input_job"
-            placeholder="Ссылка на картинку"
-            name="card-url"
-            id="card-url"
-          />
-          <button class="popup__btn popup__btn_saving" type="submit">
-            Создать
-          </button>
-          <button class="popup__btn popup__btn_close" type="button"></button>
-        </form>
+        <div class="popup__item">
+          <form
+            class="popup-container"
+            name="popup-container"
+            id="add-card"
+            novalidate
+          >
+            <h3 class="popup-container__heading">Новое место</h3>
+            <input
+              class="popup-container__input popup-container__input_name"
+              placeholder="Название"
+              name="card-name"
+              id="card-name"
+              minlength="2"
+              maxlength="30"
+              type="text"
+              required
+            />
+            <span class="popup-container__error-text card-name-error"></span>
+            <input
+              class="popup-container__input popup-container__input_job"
+              placeholder="Ссылка на картинку"
+              name="card-url"
+              id="card-url"
+              type="url"
+              required
+            />
+            <span class="popup-container__error-text card-url-error"></span>
+            <button class="popup__btn popup__btn_saving" type="submit">
+              Создать
+            </button>
+            <button class="popup__btn popup__btn_close" type="button"></button>
+          </form>
+        </div>
       </div>
       <div class="popup popup_dark" id="image-zoom">
         <div class="popup-image">
@@ -102,5 +130,6 @@
       </div>
     </template>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

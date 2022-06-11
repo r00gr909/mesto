@@ -9,3 +9,7 @@
   padding: 0 0 8px;
   box-sizing: border-box;
 }
+
+.popup-container__input {
+  margin-bottom: 0;
+}
