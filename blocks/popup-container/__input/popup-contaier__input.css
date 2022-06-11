@@ -5,11 +5,8 @@
   border: none;
   border-bottom: solid 1px #545454;
   width: 100%;
-  margin-bottom: 31px;
+  margin-bottom: 0;
   padding: 0 0 8px;
   box-sizing: border-box;
 }
 
-.popup-container__input {
-  margin-bottom: 0;
-}

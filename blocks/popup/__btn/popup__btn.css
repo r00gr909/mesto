@@ -1,4 +1,4 @@
-.popup__btn:hover {
+.popup__btn {
   align-self: flex-end;
   cursor: pointer;
 }
