@@ -160,16 +160,3 @@ function addNewCard(evt) {
 
 cardAddForm.addEventListener('submit', addNewCard);
 
-
-/* function addNewCard(evt) {
-  evt.preventDefault();
-  elements.prepend(createCard(imageInput.value, mestoInput.value));
-  closePopup(popupAdd);
-  addCardForm.reset();
-  const popupBtn = addCardForm.querySelector('.popup__save-button');
-  const popupBtnText = popupBtn.querySelector('.popup__save-text');
-  popupBtnText.classList.add('popup__save-text_disabled');
-  popupBtn.classList.add('popup__save-button_disabled');
-  popupBtn.disabled = true;
-}
- */
